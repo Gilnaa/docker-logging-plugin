@@ -1,0 +1,14 @@
+[package]
+name = "docker-logging-plugin"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+hyper = "0.14.20"
+hyperlocal = "0.8.0"
+protobuf = "3.1.0"
+serde = { version = "1.0.139", features = ["derive"] }
+serde_json = "1.0.82"
+tokio = { version = "1.20.0", features=["full"] }

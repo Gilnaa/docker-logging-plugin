@@ -1,0 +1,22 @@
+{
+  "description": "Simple file logging plugin",
+  "documentation": "https://github.com/Gilnaa/docker-logging-plugin",
+  "entrypoint": ["/bin/file-logging-plugin"],
+  "workdir": "/core",
+  "network": {
+    "type": "host"
+  },
+  "mounts": [
+    {
+      "name": "core",
+      "type": "bind",
+      "source": "/core",
+      "options": ["bind"],
+      "destination": "/core"
+    }
+  ],
+  "interface": {
+    "types": ["docker.logdriver/1.0"],
+    "socket": "logger.sock"
+  }
+}
